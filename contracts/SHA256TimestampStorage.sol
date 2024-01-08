@@ -16,7 +16,7 @@ contract SHA256TimestampStorage {
     }
 
     mapping (address => mapping (bytes32 => Metadata)) public sha256_checksums;
-    event Claim(bytes32 sha256_checksum, address claimant, bool claim);
+    event Claim(bytes32 indexed sha256_checksum, address claimant, bool claim);
 
     /**
      * @dev Store checksum and claim it
